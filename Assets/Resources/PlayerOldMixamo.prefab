@@ -2289,7 +2289,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: INVENTORY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ceef4d1f031c877479e7be954df6c397, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2180264, guid: ceef4d1f031c877479e7be954df6c397, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

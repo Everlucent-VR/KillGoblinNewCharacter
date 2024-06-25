@@ -17,6 +17,9 @@ namespace Boom
     using Candid.IcrcLedger;
     using EdjCase.ICP.BLS;
     using Newtonsoft.Json;
+    using TMPro;
+    using Photon.Pun;
+    using Photon.Realtime;
     using Candid;
 
     public class BoomManager : Singleton<BoomManager>
@@ -64,6 +67,7 @@ namespace Boom
         [SerializeField, ShowOnly] string principalId;
         [SerializeField, ShowOnly] MainDataTypes.LoginData.State loginState;
         [SerializeField, ShowOnly] bool loginCompleted;
+        public TextMeshProUGUI principalIdTxt;
 
         protected override void Awake_()
         {
@@ -125,6 +129,10 @@ namespace Boom
         {
             principalId = data.principal;
             loginState = data.state;
+            if (isLoginIn) {
+                principalIdTxt.text = data.principal;
+                PhotonNetwork.LoadLevel(0);
+            }
         }
 
         private void SelfDataChangeHandler(Data<DataTypes.Entity> data)
