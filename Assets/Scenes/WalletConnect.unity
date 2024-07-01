@@ -11842,7 +11842,7 @@ GameObject:
   - component: {fileID: 1395771122}
   - component: {fileID: 1395771123}
   m_Layer: 5
-  m_Name: OnConnect (Listener)
+  m_Name: OnLogin (Listener)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

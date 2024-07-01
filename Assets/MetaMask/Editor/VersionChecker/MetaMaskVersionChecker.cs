@@ -63,7 +63,7 @@ namespace MetaMask
             }
             catch (System.Exception ex)
             {
-                Debug.LogError($"Failed to check MetaMask SDK version: {ex.Message}");
+                // Debug.LogError($"Failed to check MetaMask SDK version: {ex.Message}");
             }
         }
 

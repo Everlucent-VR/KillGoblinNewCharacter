@@ -57,7 +57,7 @@ namespace MetaMask.Unity
                 if (sdk2 != null) return sdk2;
             }
 
-            MetaMaskDebug.LogError("No MetaMaskSDK instance found! Please setup a MetaMaskSDK prefab in your scene.");
+            // MetaMaskDebug.LogError("No MetaMaskSDK instance found! Please setup a MetaMaskSDK prefab in your scene.");
             return null;
         }
         

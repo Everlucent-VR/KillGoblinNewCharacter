@@ -7965,7 +7965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3245743282429210067, guid: bb357f1634528a149871a2f38d213b8b, type: 3}
       propertyPath: url
-      value: https://nfid.one/authenticate/?applicationName=BOOM%20DAO&applicationLogo=https://i.postimg.cc/L4f471FF/logo.png#authorize
+      value: https://7p3gx-jaaaa-aaaal-acbda-cai.icp0.io
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

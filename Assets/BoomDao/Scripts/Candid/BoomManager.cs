@@ -129,10 +129,10 @@ namespace Boom
         {
             principalId = data.principal;
             loginState = data.state;
-            if (isLoginIn) {
-                principalIdTxt.text = data.principal;
-                PhotonNetwork.LoadLevel(0);
-            }
+            // if (isLoginIn) {
+            //     principalIdTxt.text = data.principal;
+            //     PhotonNetwork.LoadLevel(0);
+            // }
         }
 
         private void SelfDataChangeHandler(Data<DataTypes.Entity> data)
