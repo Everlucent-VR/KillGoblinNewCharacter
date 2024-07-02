@@ -22,7 +22,7 @@ namespace Candid
 
         [SerializeField, ShowOnly] bool autoLoginRequested;
 
-        public static LoginManager Instance;
+        public static LoginManager  Instance;
         public bool IsEmbeddedAgent { get; set; }
 
         [SerializeField]
@@ -49,7 +49,7 @@ namespace Candid
 
             if (data.state != MainDataTypes.LoginData.State.Logedout) return;
 
-            if (autoLoginRequested) return;
+            if(autoLoginRequested) return;
 
             autoLoginRequested = true;
 
@@ -73,7 +73,7 @@ namespace Candid
 
             Broadcast.Invoke(new IndetityJson(identityJson));
             BrowserUtils.ToggleLoginIframe(false);
-
+            
             CloseSocket();
         }
 
@@ -132,17 +132,17 @@ namespace Candid
         protected override void OnMessage(MessageEventArgs e)
         {
             ("Websocket Message Received: " + e.Data).Log();
-
+            
 
 
             WebsocketMessage message = JsonConvert.DeserializeObject<WebsocketMessage>(e.Data);
-
+            
             if (message == null)
             {
                 Debug.LogError("Error: Unable to parse websocket message, does it follow the correct WebsocketMessage structure?");
                 return;
             }
-
+            
             switch (message.type)
             {
                 // case "fetchCanisterIds":
@@ -150,7 +150,7 @@ namespace Candid
                 //     break;
                 case "identityJson":
                     LoginManager.Instance.CreateIdentityWithJson(message.content);
-                    break;
+                    break; 
                 default:
                     Debug.LogError("No corresponding websocket message type found for=" + message.type);
                     break;

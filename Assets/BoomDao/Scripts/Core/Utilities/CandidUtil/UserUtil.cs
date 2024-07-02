@@ -328,7 +328,7 @@ namespace Boom
 
             if ((loginDataAsOk.state == MainDataTypes.LoginData.State.FetchingUserData || loginDataAsOk.state == MainDataTypes.LoginData.State.LoggedIn) == false)
             {
-                $"You can only fetch data if your login state is {MainDataTypes.LoginData.State.FetchingUserData} or {MainDataTypes.LoginData.State.LoggedIn}, Current state: {loginDataAsOk.state}".Error(nameof(UserUtil.RequestData));
+                $"You can only request {arg.GetType().Name} data if your login state is {MainDataTypes.LoginData.State.FetchingUserData} or {MainDataTypes.LoginData.State.LoggedIn}, Current state: {loginDataAsOk.state}".Error(nameof(UserUtil.RequestData));
 
                 return;
             }
@@ -423,7 +423,7 @@ namespace Boom
 
             if ((loginDataAsOk.state == MainDataTypes.LoginData.State.FetchingUserData || loginDataAsOk.state == MainDataTypes.LoginData.State.LoggedIn) == false)
             {
-                $"You can only update data if your login state is {MainDataTypes.LoginData.State.FetchingUserData} or {MainDataTypes.LoginData.State.LoggedIn}, Current state: {loginDataAsOk.state}".Error(nameof(UserUtil.UpdateData));
+                $"You can only update {(newVals.Length > 0? newVals[0].GetType().Name : newVals.GetType().Name)} data if your login state is {MainDataTypes.LoginData.State.FetchingUserData} or {MainDataTypes.LoginData.State.LoggedIn}, Current state: {loginDataAsOk.state}".Error(nameof(UserUtil.UpdateData));
 
                 return;
             }

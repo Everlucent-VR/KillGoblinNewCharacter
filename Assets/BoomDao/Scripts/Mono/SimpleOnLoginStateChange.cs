@@ -1,5 +1,7 @@
 namespace Boom.Mono
 {
+    using Boom.Utility;
+
     using UnityEngine;
     using UnityEngine.Events;
 
