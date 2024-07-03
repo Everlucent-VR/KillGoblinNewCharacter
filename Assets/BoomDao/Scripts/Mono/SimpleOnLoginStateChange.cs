@@ -4,6 +4,7 @@ namespace Boom.Mono
 
     using UnityEngine;
     using UnityEngine.Events;
+    using TMPro;
 
     public class SimpleOnLoginStateChange : MonoBehaviour
     {
@@ -11,6 +12,8 @@ namespace Boom.Mono
         [SerializeField] UnityEvent onFetchingUserData;
         [SerializeField] UnityEvent onLoggedIn;
         [SerializeField] UnityEvent onLoggedOut;
+
+        [SerializeField] private TextMeshProUGUI principalTxt;
 
 
         //First log out happens right at the start of the game, it initialize BoomManager.
@@ -38,6 +41,7 @@ namespace Boom.Mono
             else if (data.state == MainDataTypes.LoginData.State.LoggedIn)
             {
                 onLoggedIn.Invoke();
+                principalTxt.text = data.principal;
             }
             else if (data.state == MainDataTypes.LoginData.State.Logedout)
             {

@@ -1120,6 +1120,39 @@ namespace Boom
                 if (result.IsOk) return new(result.AsOk());
                 return new(result.AsErr().Content);
             }
+
+            public async static UniTask<UResult<ProcessedActionResponse, string>> UserKillPlayer()
+            {
+                var result = await ProcessAction("kill_player");
+
+                if (result.IsOk) return new(result.AsOk());
+                return new(result.AsErr().Content);
+            }
+
+            public async static UniTask<UResult<ProcessedActionResponse, string>> UserGetItem()
+            {
+                var result = await ProcessAction("get_item");
+
+                if (result.IsOk) return new(result.AsOk());
+                return new(result.AsErr().Content);
+            }
+
+            public async static UniTask<UResult<ProcessedActionResponse, string>> UserGetNFT()
+            {
+                var result = await ProcessAction("get_nft");
+
+                if (result.IsOk) return new(result.AsOk());
+                return new(result.AsErr().Content);
+            }
+
+            public async static UniTask<UResult<ProcessedActionResponse, string>> SendMessageToPlayer()
+            {
+                var result = await ProcessAction("send_message");
+
+                if (result.IsOk) return new(result.AsOk());
+                return new(result.AsErr().Content);
+            }
+
         }
 
         public static class Transfer

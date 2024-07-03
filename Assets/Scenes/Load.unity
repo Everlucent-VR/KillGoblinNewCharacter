@@ -11994,6 +11994,7 @@ GameObject:
   - component: {fileID: 1481478689}
   - component: {fileID: 1481478688}
   - component: {fileID: 1481478687}
+  - component: {fileID: 1481478691}
   m_Layer: 5
   m_Name: Canvas(PrincipalID)
   m_TagString: Untagged
@@ -12084,6 +12085,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1481478691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481478686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c574b6a2dcf694ba3f4944d8c2a7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1485586180
 GameObject:
   m_ObjectHideFlags: 0
@@ -15247,18 +15260,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 312876135}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: data.principal
-          m_BoolArgument: 0
-        m_CallState: 2
   onLoggedOut:
     m_PersistentCalls:
       m_Calls:
@@ -15286,6 +15287,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  principalTxt: {fileID: 312876135}
 --- !u!4 &1830831666
 Transform:
   m_ObjectHideFlags: 0
