@@ -23,7 +23,6 @@ public class InventoryHealthItem : MonoBehaviour, IItem
   
     public void UseItem()
     {
-     
         GamePlayHandler.Instance.AddHealth(10);
     }
 }

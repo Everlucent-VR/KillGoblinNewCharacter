@@ -88,6 +88,8 @@ namespace StarterAssets
 
         // player
         private float _speed;
+
+        private float _speedUpRate = 1.0f;
         private float _animationBlend;
         private float _targetRotation = 0.0f;
         private float _rotationVelocity;
@@ -224,7 +226,7 @@ namespace StarterAssets
         private void Move()
         {
             // set target speed based on move speed, sprint speed and if sprint is pressed
-            float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+            float targetSpeed = _input.sprint ? SprintSpeed * _speedUpRate : MoveSpeed * _speedUpRate;
 
             // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 

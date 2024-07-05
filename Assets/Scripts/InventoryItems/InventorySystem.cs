@@ -26,6 +26,7 @@ public class InventorySystem : MonoBehaviour
         }
 
         int i = 0;
+        Debug.Log("loadInventory");
         foreach (var v in inventoryData.itemsList)
         {
             InventoryBtn iBtn = inventoryBtns[i].GetComponent<InventoryBtn>();

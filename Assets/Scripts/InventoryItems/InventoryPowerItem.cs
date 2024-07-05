@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Boom.Utility;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,7 +23,7 @@ public class InventoryPowerItem : MonoBehaviour, IItem
 
     public void UseItem()
     {
-     
+        Debug.Log(_ItemName);
         GamePlayHandler.Instance.AddHealth(10);
     }
 }
